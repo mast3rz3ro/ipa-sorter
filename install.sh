@@ -21,8 +21,8 @@
 			sudo apt install -y unzip p7zip gawk libplist-utils || exit 1
 			curl -L "$main" -o "./ipa-sorter.sh" || exit 1
 			curl -L "$plget" -o "./plget" || exit 1
-			chown mobile:mobile "./plget"
-			chmod 755 "./plget"
+			chown mobile:mobile "./plget" "./ipa-sorter.sh"
+			chmod 755 "./plget" "./ipa-sorter.sh"
 		fi
 	done
 
