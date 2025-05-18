@@ -50,7 +50,7 @@ _config()
 			_echo "idenifying file: $f" 0
 		if [ -s "$f" ]; then
 				c="$(file "$f")"
-			if [[ "$c" = *"Zip archive"* ]]; then
+			if [[ "$c" = *"Zip archive"* ]] || [[ "$c" = *"IOS/iPadOS IPA file"* ]]; then
 				mode="zip"; stat[1]=$((stat[1]+1))
 			elif [[ "$c" = *"Mach-O"* ]]; then
 				mode="mach"; stat[1]=$((stat[1]+1))
